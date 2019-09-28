@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="action_button_size">32dp</dimen>
+    <dimen name="view_big_spacing">24dp</dimen>
+    <dimen name="view_spacing">16dp</dimen>
+    <dimen name="view_small_spacing">8dp</dimen>
+</resources>

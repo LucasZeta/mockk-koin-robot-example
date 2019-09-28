@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RockVeganFood</string>
+    <string name="menu_fragment_label">Cardápio</string>
+    <string name="cart_fragment_label">Carrinho</string>
+
+    <string name="add_to_cart_button">Adicionar ao carrinho</string>
+    <string name="initial_amount">0</string>
+    <string name="minus_button_description">Diminuir quantidade</string>
+    <string name="plus_button_description">Aumentar quantidade</string>
+    <string name="confirm_your_order">Confirme o seu pedido</string>
+    <string name="update_order_button">Modificar itens</string>
+    <string name="make_order_button">Fazer pedido</string>
+    <string name="cart_item_title">%dx %s</string>
+    <string name="order_success_message">Seu pedido foi realizado com sucesso</string>
+</resources>
