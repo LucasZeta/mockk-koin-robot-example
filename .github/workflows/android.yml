@@ -7,7 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  apk:
+    name: Generate .apk
     runs-on: macos-latest
 
     steps:
@@ -24,13 +25,11 @@ jobs:
           name: app-debug.apk
           path: app/build/outputs/apk/debug/app-debug.apk
   test:
+    name: Run UI tests
     runs-on: macos-latest
 
     steps:
     - name: checkout
       uses: actions/checkout@v2
     - name: Run UI tests
-      uses: reactivecircus/android-emulator-runner@v2
-      with:
-        api-level: 28
-        script: ./gradlew connectedCheck
+      uses: vgaidarji/android-github-actions-emulator@v1.0.1
