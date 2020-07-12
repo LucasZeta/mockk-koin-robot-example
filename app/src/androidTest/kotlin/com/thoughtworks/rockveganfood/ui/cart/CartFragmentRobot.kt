@@ -1,6 +1,6 @@
 package com.thoughtworks.rockveganfood.ui.cart
 
-import androidx.fragment.app.testing.FragmentScenario
+import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.test.espresso.Espresso.onView
@@ -65,11 +65,8 @@ class CartFragmentSetupRobot : KoinComponent {
     }
 
     infix fun launch(block: CartFragmentActionRobot.() -> Unit): CartFragmentActionRobot {
-        FragmentScenario.launchInContainer(
-            CartFragment::class.java,
-            null,
-            R.style.AppTheme,
-            null
+        launchFragmentInContainer<CartFragment>(
+            themeResId = R.style.AppTheme
         ).onFragment {
             Navigation.setViewNavController(it.requireView(), navController)
         }

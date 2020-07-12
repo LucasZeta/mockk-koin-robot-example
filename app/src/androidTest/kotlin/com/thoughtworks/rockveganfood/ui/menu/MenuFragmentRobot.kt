@@ -1,6 +1,6 @@
 package com.thoughtworks.rockveganfood.ui.menu
 
-import androidx.fragment.app.testing.FragmentScenario
+import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.test.espresso.Espresso.onView
@@ -51,11 +51,8 @@ class MenuFragmentSetupRobot : KoinComponent {
     }
 
     infix fun launch(block: MenuFragmentActionRobot.() -> Unit): MenuFragmentActionRobot {
-        FragmentScenario.launchInContainer(
-            MenuFragment::class.java,
-            null,
-            R.style.AppTheme,
-            null
+        launchFragmentInContainer<MenuFragment>(
+            themeResId = R.style.AppTheme
         ).onFragment {
             Navigation.setViewNavController(it.requireView(), navController)
         }
