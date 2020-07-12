@@ -20,7 +20,7 @@ class MenuItemDiffCallback(
 
         val sameCount = oldItem.second == newItem.second
         val sameDish = oldItem.first.uid == newItem.first.uid &&
-                oldItem.first.title == newItem.first.title
+            oldItem.first.title == newItem.first.title
 
         return sameCount && sameDish
     }

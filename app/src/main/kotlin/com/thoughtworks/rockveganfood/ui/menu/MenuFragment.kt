@@ -7,9 +7,9 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.thoughtworks.rockveganfood.R
-import com.thoughtworks.rockveganfood.ui.ext.addVerticalDivider
 import com.thoughtworks.rockveganfood.ui.BaseFragment
 import com.thoughtworks.rockveganfood.ui.OrderViewModel
+import com.thoughtworks.rockveganfood.ui.ext.addVerticalDivider
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class MenuFragment : BaseFragment(R.layout.fragment_menu) {

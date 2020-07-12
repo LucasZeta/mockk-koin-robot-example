@@ -33,10 +33,15 @@ class CartFragment : BaseFragment(R.layout.fragment_cart) {
     }
 
     private fun observeViewState() {
-        viewModel.message.observe(viewLifecycleOwner, Observer { it?.let { messageRes ->
-            Toast.makeText(requireContext(), getString(messageRes), Toast.LENGTH_LONG).show()
-            viewModel.invalidateMessage()
-        }})
+        viewModel.message.observe(
+            viewLifecycleOwner,
+            Observer {
+                it?.let { messageRes ->
+                    Toast.makeText(requireContext(), getString(messageRes), Toast.LENGTH_LONG).show()
+                    viewModel.invalidateMessage()
+                }
+            }
+        )
     }
 
     private fun setClickListeners() {

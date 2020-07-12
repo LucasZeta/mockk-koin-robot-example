@@ -36,12 +36,14 @@ class CartFragmentSetupRobot : KoinComponent {
     private val viewModel = OrderViewModel(orderRepository)
 
     init {
-        loadKoinModules(module(override = true) {
-            single { orderRepository }
-            single { slotOrder }
-            single { viewModel }
-            single { navController }
-        })
+        loadKoinModules(
+            module(override = true) {
+                single { orderRepository }
+                single { slotOrder }
+                single { viewModel }
+                single { navController }
+            }
+        )
     }
 
     fun mockSelectedItems() {

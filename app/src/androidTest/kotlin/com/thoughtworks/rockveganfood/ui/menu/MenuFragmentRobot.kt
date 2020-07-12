@@ -35,11 +35,13 @@ class MenuFragmentSetupRobot : KoinComponent {
     private val navController: NavController = mockk(relaxed = true)
 
     init {
-        loadKoinModules(module(override = true) {
-            single { orderRepository }
-            single { navController }
-            single { viewModel }
-        })
+        loadKoinModules(
+            module(override = true) {
+                single { orderRepository }
+                single { navController }
+                single { viewModel }
+            }
+        )
     }
 
     fun mockMenuWithFewItems() {
@@ -67,17 +69,21 @@ class MenuFragmentActionRobot {
         MenuFragmentResultRobot().apply(block)
 
     fun addItem(dishTitle: String) {
-        onView(allOf(
-            withId(R.id.plus_button),
-            hasSibling(withText(dishTitle))
-        )).perform(click())
+        onView(
+            allOf(
+                withId(R.id.plus_button),
+                hasSibling(withText(dishTitle))
+            )
+        ).perform(click())
     }
 
     fun removeItem(dishTitle: String) {
-        onView(allOf(
-            withId(R.id.minus_button),
-            hasSibling(withText(dishTitle))
-        )).perform(click())
+        onView(
+            allOf(
+                withId(R.id.minus_button),
+                hasSibling(withText(dishTitle))
+            )
+        ).perform(click())
     }
 
     fun addToCart() {

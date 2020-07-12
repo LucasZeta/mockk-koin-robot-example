@@ -52,7 +52,7 @@ class OrderViewModel(private val repository: OrderRepository) : ViewModel() {
         }
     }
 
-    fun fetchOrder(): List<MenuItem>{
+    fun fetchOrder(): List<MenuItem> {
         return extractSelectedItems().toList()
     }
 
