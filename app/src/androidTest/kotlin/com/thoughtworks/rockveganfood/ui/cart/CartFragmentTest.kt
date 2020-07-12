@@ -10,7 +10,7 @@ import org.junit.runner.RunWith
 class CartFragmentTest {
 
     @get:Rule
-    var instantTaskExecutorRule = InstantTaskExecutorRule()
+    val instantTaskExecutorRule = InstantTaskExecutorRule()
 
     @Test
     fun whenMakingOrder_requestShouldContainItems() {
