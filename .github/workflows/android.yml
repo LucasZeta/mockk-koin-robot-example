@@ -9,7 +9,7 @@ on:
 jobs:
   apk:
     name: Generate .apk
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -26,7 +26,7 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
   test:
     name: Run UI tests
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: checkout
