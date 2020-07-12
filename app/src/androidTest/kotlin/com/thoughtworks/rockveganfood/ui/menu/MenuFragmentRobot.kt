@@ -14,6 +14,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withText
 import com.thoughtworks.rockveganfood.R
 import com.thoughtworks.rockveganfood.data.model.Dish
 import com.thoughtworks.rockveganfood.data.repository.OrderRepository
+import com.thoughtworks.rockveganfood.ui.OrderViewModel
 import io.mockk.coEvery
 import io.mockk.mockk
 import io.mockk.verify
@@ -30,12 +31,14 @@ fun setupMenuFragment(block: MenuFragmentSetupRobot.() -> Unit) =
 class MenuFragmentSetupRobot : KoinComponent {
 
     private val orderRepository: OrderRepository = mockk()
+    private val viewModel = OrderViewModel(orderRepository)
     private val navController: NavController = mockk(relaxed = true)
 
     init {
         loadKoinModules(module(override = true) {
             single { orderRepository }
             single { navController }
+            single { viewModel }
         })
     }
 
