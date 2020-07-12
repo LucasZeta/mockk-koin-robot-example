@@ -1,3 +1,5 @@
+![CI](https://github.com/LucasZeta/mockk-koin-robot-example/workflows/CI/badge.svg)
+
 # Instrumented tests using MockK, Koin and Robot Pattern
 
 This sample was presented at the [Thoughtworks Tech Talks II](https://www.meetup.com/conexaotwsp/events/264999508/) event in the [ThoughtWorks](https://www.thoughtworks.com/)' São Paulo office.
